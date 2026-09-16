@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vennela Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>🛍️ Vennela Store</h2>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#cart">Cart 🛒</a>
+            <a href="#checkout">Checkout</a>
+            <a href="#my-orders">My Orders</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Vennela Store ✨</h1>
+        <p>Discover amazing products at amazing prices.</p>
+        <button onclick="showMessage()">Shop Now</button>
+    </section>
+
+    <section class="products">
+        <h2>Our Products</h2>
+
+        <div class="product-container">
+
+            <div class="product">
+                <div class="emoji">👕</div>
+                <h3>Stylish T-Shirt</h3>
+                <p>₹499</p>
+                <button onclick="addToCart('Stylish T-Shirt')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="emoji">👟</div>
+                <h3>Running Shoes</h3>
+                <p>₹1,299</p>
+                <button onclick="addToCart('Running Shoes')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="emoji">🎧</div>
+                <h3>Wireless Headphones</h3>
+                <p>₹999</p>
+                <button onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cart" class="products">
+    <h2>🛒 My Cart</h2>
+    <div id="cart-items">
+        <p>Click the button below to view your cart.</p>
+    </div>
+
+    <button onclick="loadCart()">View Cart</button>
+    </section>
+
+    <section id="checkout" class="products">
+    <h2>🧾 Checkout</h2>
+    <section id="my-orders" class="products">
+    <h2>📦 My Orders</h2>
+
+    <button onclick="loadOrders()">View My Orders</button>
+
+    <div id="orders-list"></div>
+</section>
+
+    <form id="checkout-form">
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name"
+            required
+        >
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+        >
+
+        <textarea
+            id="address"
+            placeholder="Enter your delivery address"
+            required
+        ></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <div id="order-message"></div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
